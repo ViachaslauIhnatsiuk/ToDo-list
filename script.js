@@ -27,28 +27,45 @@ function addTask(task, status) {
 
 // Вывод списка дел со статусом задачи
 
+let count = 0;
+
 function showList() {
 	console.log("ToDo:");
 	for (let task in list) {
 		if (list[task] === "ToDo") {
 			console.log(task);
+			count++;
 		}
 	}
+	if (count === 0) {
+		console.log('-');
+	}
+	count = 0;
 	console.log("In progress:");
 	for (let task in list) {
 		if (list[task] === "In progress") {
 			console.log(task);
+			count++;
 		}
 	}
+	if (count === 0) {
+		console.log('-');
+	}
+	count = 0;
 	console.log("Done:");
 	for (let task in list) {
 		if (list[task] === "Done") {
 			console.log(task);
+			count++;
 		}
 	}
+	if (count === 0) {
+		console.log('-');
+	}
+	count = 0;
 }
 
-changeStatus("have a walk", "In progress");
+/* changeStatus("have a walk", "In progress");
 deleteTask("watch stream");
-addTask("go to sleep", "ToDo");
+addTask("go to sleep", "ToDo"); */
 showList();
