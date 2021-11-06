@@ -44,9 +44,9 @@ function taskStatus(status) {
 // Вывод списка дел со статусом задачи
 
 function showList() {
-	listTask("ToDo");
-	listTask("In progress");
-	listTask("Done");
+	taskStatus("ToDo");
+	taskStatus("In progress");
+	taskStatus("Done");
 };
 
 /* changeStatus("have a walk", "In progress");
