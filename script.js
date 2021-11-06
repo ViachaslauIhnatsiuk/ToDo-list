@@ -27,7 +27,7 @@ function addTask(task, status) {
 
 // Функция для вывода каждого отдельного вида статуса
 
-function listTask(status) {
+function taskStatus(status) {
 	let count = false;
 	console.log(status + ":");
 	for (let task in list) {
