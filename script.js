@@ -25,36 +25,13 @@ function addTask(task, status) {
 	list[task] = status;
 };
 
-// Вывод списка дел со статусом задачи
+// Функция для вывода каждого отдельного вида статуса
 
-function showList() {
+function listTask(status) {
 	let count = false;
-	console.log("ToDo:");
-	count = false;
+	console.log(status + ":");
 	for (let task in list) {
-		if (list[task] === "ToDo") {
-			console.log(task);
-			count = true;
-		}
-	}
-	if (!count) {
-		console.log('-');
-	}
-	console.log("In progress:");
-	count = false;
-	for (let task in list) {
-		if (list[task] === "In progress") {
-			console.log(task);
-			count = true;
-		}
-	}
-	if (!count) {
-		console.log('-');
-	}
-	console.log("Done:");
-	count = false;
-	for (let task in list) {
-		if (list[task] === "Done") {
+		if (list[task] === status) {
 			console.log(task);
 			count = true;
 		}
@@ -63,6 +40,14 @@ function showList() {
 		console.log('-');
 	}
 }
+
+// Вывод списка дел со статусом задачи
+
+function showList() {
+	listTask("ToDo");
+	listTask("In progress");
+	listTask("Done");
+};
 
 /* changeStatus("have a walk", "In progress");
 deleteTask("watch stream");
