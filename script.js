@@ -8,12 +8,12 @@ const list = {
 	"learn JavaScript": "In progress",
 	"have a walk": "ToDo",
 	"watch stream": "ToDo",
-}
+};
 
 // Изменение статуса задачи
 function changeStatus(task, status) {
 	list[task] = status;
-}
+};
 
 // Удаление задачи
 function deleteTask(task) {
@@ -39,7 +39,7 @@ function taskStatus(status) {
 	if (!count) {
 		console.log('-');
 	}
-}
+};
 
 // Вывод списка дел со статусом задачи
 
