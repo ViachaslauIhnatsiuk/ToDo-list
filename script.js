@@ -51,5 +51,4 @@ function showList() {
 changeStatus("have a walk", "In progress");
 deleteTask("watch stream");
 addTask("go to sleep", "ToDo");
-console.log(list);
 showList();
