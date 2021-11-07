@@ -22,15 +22,15 @@ function addTask(task, status) {
 };
 
 function taskStatus(status) {
-	let count = false;
+	let isPrinted = false;
 	console.log(status + ":");
 	for (let task in list) {
 		if (list[task] === status) {
 			console.log(task);
-			count = true;
+			isPrinted = true;
 		}
 	}
-	if (!count) {
+	if (!isPrinted) {
 		console.log('-');
 	}
 };
