@@ -1,6 +1,5 @@
 'use strict';
 
-// Объект со списком задач
 const list = {
 	"wake up": "Done",
 	"take a shower": "Done",
@@ -10,22 +9,17 @@ const list = {
 	"watch stream": "ToDo",
 };
 
-// Изменение статуса задачи
 function changeStatus(task, status) {
 	list[task] = status;
 };
 
-// Удаление задачи
 function deleteTask(task) {
 	delete list[task];
 };
 
-// Добавление новой задачи
 function addTask(task, status) {
 	list[task] = status;
 };
-
-// Функция для вывода каждого отдельного вида статуса
 
 function taskStatus(status) {
 	let count = false;
@@ -41,15 +35,14 @@ function taskStatus(status) {
 	}
 };
 
-// Вывод списка дел со статусом задачи
-
 function showList() {
 	taskStatus("ToDo");
 	taskStatus("In progress");
 	taskStatus("Done");
 };
 
-/* changeStatus("have a walk", "In progress");
+
+changeStatus("have a walk", "In progress");
 deleteTask("watch stream");
-addTask("go to sleep", "ToDo"); */
+addTask("go to sleep", "ToDo");
 showList();
