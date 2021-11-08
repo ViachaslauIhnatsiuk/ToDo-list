@@ -1,12 +1,16 @@
 'use strict';
 
+const DONE = "Done";
+const IN_PROGRESS = "In progress";
+const TODO = "ToDo";
+
 const list = {
-	"wake up": "Done",
-	"take a shower": "Done",
-	"have breakfast": "ToDo",
-	"learn JavaScript": "In progress",
-	"have a walk": "ToDo",
-	"watch stream": "ToDo",
+	"wake up": DONE,
+	"take a shower": DONE,
+	"have breakfast": TODO,
+	"learn JavaScript": IN_PROGRESS,
+	"have a walk": TODO,
+	"watch stream": TODO,
 };
 
 function changeStatus(task, status) {
@@ -36,13 +40,13 @@ function taskStatus(status) {
 };
 
 function showList() {
-	taskStatus("ToDo");
-	taskStatus("In progress");
-	taskStatus("Done");
+	taskStatus(TODO);
+	taskStatus(IN_PROGRESS);
+	taskStatus(DONE);
 };
 
 
-changeStatus("have a walk", "In progress");
+changeStatus("have a walk", IN_PROGRESS);
 deleteTask("watch stream");
-addTask("go to sleep", "ToDo");
+addTask("go to sleep", DONE);
 showList();
